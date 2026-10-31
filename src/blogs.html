@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>آخرین مطالب وبلاگ</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #faf7f2;
+        }
+
+        .blogs-section {
+            padding: 65px 20px;
+        }
+
+        .blogs-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Heading */
+
+        .blogs-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blogs-heading span {
+            color: #d97706;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .blogs-heading h1 {
+            color: #30251f;
+            font-size: 34px;
+            margin: 14px 0;
+        }
+
+        .blogs-heading p {
+            color: #777;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* Blog Cards */
+
+        .blogs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            transition: 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Images */
+
+        .blog-image {
+            height: 190px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.4s;
+        }
+
+        .blog-card:hover .blog-image img {
+            transform: scale(1.06);
+        }
+
+        /* Blog Content */
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-date {
+            color: #d97706;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .blog-content h2 {
+            color: #30251f;
+            font-size: 19px;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .blog-content p {
+            color: #777;
+            font-size: 14px;
+            line-height: 2;
+            min-height: 85px;
+        }
+
+        /* Read More Button */
+
+        .read-more {
+            display: inline-block;
+            text-decoration: none;
+            background: #d97706;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 13px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .read-more:hover {
+            background: #a95405;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 800px) {
+            .blogs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .blogs-grid {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+                margin: auto;
+            }
+
+            .blogs-heading h1 {
+                font-size: 28px;
+            }
+
+            .blog-image {
+                height: 190px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="blogs-section">
+
+        <div class="blogs-container">
+
+            <!-- Section Heading -->
+
+            <div class="blogs-heading">
+
+                <span>وبلاگ کافی‌شاپ ما</span>
+
+                <h1>آخرین مطالب وبلاگ</h1>
+
+                <p>
+                    با مطالب جالب و آموزنده ما درباره قهوه،
+                    نوشیدنی‌ها و دنیای کافی‌شاپ آشنا شوید.
+                </p>
+
+            </div>
+
+
+            <!-- Blog Cards -->
+
+            <div class="blogs-grid">
+
+
+                <!-- Blog 1 -->
+
+                <div class="blog-card">
+
+                    <div class="blog-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600"
+                            alt="قهوه تازه">
+
+                    </div>
+
+                    <div class="blog-content">
+
+                        <div class="blog-date">
+                            ۳۰ میزان ۱۴۰۵
+                        </div>
+
+                        <h2>
+                            رازهای تهیه یک قهوه خوش‌طعم
+                        </h2>
+
+                        <p>
+                            برای داشتن یک قهوه خوش‌طعم،
+                            انتخاب دانه‌های باکیفیت،
+                            آب مناسب و روش درست تهیه اهمیت دارد.
+                        </p>
+
+                        <a href="#" class="read-more">
+                            بیشتر بخوانید ←
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Blog 2 -->
+
+                <div class="blog-card">
+
+                    <div class="blog-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600"
+                            alt="دسر خوشمزه">
+
+                    </div>
+
+                    <div class="blog-content">
+
+                        <div class="blog-date">
+                            ۲۸ میزان ۱۴۰۵
+                        </div>
+
+                        <h2>
+                            دسرهای خوشمزه برای روزهای خاص
+                        </h2>
+
+                        <p>
+                            دسرهای خوشمزه می‌توانند لحظات
+                            شیرین و خاطره‌انگیزی برای شما
+                            و خانواده‌تان ایجاد کنند.
+                        </p>
+
+                        <a href="#" class="read-more">
+                            بیشتر بخوانید ←
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Blog 3 -->
+
+                <div class="blog-card">
+
+                    <div class="blog-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600"
+                            alt="نوشیدنی سرد">
+
+                    </div>
+
+                    <div class="blog-content">
+
+                        <div class="blog-date">
+                            ۲۵ میزان ۱۴۰۵
+                        </div>
+
+                        <h2>
+                            بهترین نوشیدنی‌ها برای روزهای گرم
+                        </h2>
+
+                        <p>
+                            نوشیدنی‌های سرد و تازه با طعم‌های
+                            مختلف، انتخابی عالی برای روزهای
+                            گرم و آفتابی هستند.
+                        </p>
+
+                        <a href="#" class="read-more">
+                            بیشتر بخوانید ←
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
