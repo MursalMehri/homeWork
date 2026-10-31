@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>میلک‌شیک‌های ویژه</title>
+    <link rel="stylesheet" href="./output.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #faf7f2;
+        }
+
+        .milkshake-section {
+            padding: 65px 20px;
+        }
+
+        .milkshake-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-heading span {
+            color: #d97706;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .section-heading h1 {
+            font-size: 34px;
+            color: #30251f;
+            margin: 12px 0;
+        }
+
+        .section-heading p {
+            color: #777;
+            font-size: 15px;
+        }
+
+        .milkshake-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .milkshake-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            transition: 0.3s ease;
+        }
+
+        .milkshake-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+
+        .milkshake-image {
+            width: 100%;
+            height: 190px;
+            overflow: hidden;
+        }
+
+        .milkshake-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.4s;
+        }
+
+        .milkshake-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .milkshake-info {
+            padding: 20px;
+        }
+
+        .milkshake-info h2 {
+            color: #30251f;
+            font-size: 19px;
+            margin: 0 0 12px;
+        }
+
+        .milkshake-info p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.9;
+            min-height: 75px;
+        }
+
+        .milkshake-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .price {
+            color: #d97706;
+            font-size: 20px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .order-button {
+            background: #d97706;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 16px;
+            cursor: pointer;
+            font-size: 13px;
+            font-family: inherit;
+            transition: 0.3s;
+        }
+
+        .order-button:hover {
+            background: #a95405;
+        }
+
+        @media (max-width: 800px) {
+            .milkshake-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .milkshake-grid {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+                margin: auto;
+            }
+
+            .section-heading h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="milkshake-section">
+
+    <div class="milkshake-container">
+
+        <div class="section-heading">
+            <span>منوی ویژه کافی‌شاپ</span>
+            <h1>بهترین میلک‌شیک‌ها</h1>
+            <p>طعم خوشمزه و تازه را با نوشیدنی‌های ویژه ما تجربه کنید.</p>
+        </div>
+
+        <div class="milkshake-grid">
+
+            <!-- میلک شیک توت فرنگی -->
+            <div class="milkshake-card">
+
+                <div class="milkshake-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=600"
+                        alt="میلک شیک توت فرنگی">
+                </div>
+
+                <div class="milkshake-info">
+                    <h2>میلک‌شیک توت‌فرنگی</h2>
+
+                    <p>
+                        ترکیبی خوشمزه از توت‌فرنگی تازه،
+                        شیر و بستنی خامه‌ای برای یک طعم دل‌پذیر.
+                    </p>
+
+                    <div class="milkshake-bottom">
+                        <span class="price">۲۵۰ افغانی</span>
+                        <button class="order-button">سفارش دهید</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- میلک شیک موز -->
+            <div class="milkshake-card">
+
+                <div class="milkshake-image">
+                    <img
+                        src="https://manage.healu360.com/uploads/2024/08/bc2197e4983bdf7c7627542c0b43cef9.jpg"
+                        alt="میلک شیک موز">
+                </div>
+
+                <div class="milkshake-info">
+                    <h2>میلک‌شیک موز</h2>
+
+                    <p>
+                        نوشیدنی نرم و خامه‌ای با موز تازه و شیر،
+                        مناسب برای دوست‌داران طعم طبیعی.
+                    </p>
+
+                    <div class="milkshake-bottom">
+                        <span class="price">۲۰۰ افغانی</span>
+                        <button class="order-button">سفارش دهید</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- میلک شیک چاکلیت -->
+            <div class="milkshake-card">
+
+                <div class="milkshake-image">
+                    <img
+                        src="https://au.wilfa.com/cdn/shop/articles/Slush-Machine_Chokolate-Milkshake_1x1_e35ef3a2-09c3-4657-be30-7b2383cb99c7.webp?v=1755074868&width=1920"
+                        alt="میلک شیک چاکلیت">
+                </div>
+
+                <div class="milkshake-info">
+                    <h2>میلک‌شیک چاکلیت</h2>
+
+                    <p>
+                        ترکیبی غلیظ و خوشمزه از چاکلیت،
+                        شیر و بستنی برای عاشقان طعم چاکلیت.
+                    </p>
+
+                    <div class="milkshake-bottom">
+                        <span class="price">۳۰۰ افغانی</span>
+                        <button class="order-button">سفارش دهید</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
