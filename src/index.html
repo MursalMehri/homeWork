@@ -1,13 +1,582 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="  flex justify-center items-center h-screen ">
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
+    /* Milkshakes */
+    .milkshake-section {
+        padding: 65px 20px;
+        background: #faf7f2;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .milkshake-container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .section-heading {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .section-heading span {
+        color: #d97706;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .section-heading h1 {
+        font-size: 34px;
+        color: #30251f;
+        margin: 12px 0;
+    }
+
+    .section-heading p {
+        color: #777;
+        font-size: 15px;
+    }
+
+    .milkshake-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .milkshake-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        transition: 0.3s ease;
+    }
+
+    .milkshake-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+
+    .milkshake-image {
+        width: 100%;
+        height: 190px;
+        overflow: hidden;
+    }
+
+    .milkshake-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: 0.4s;
+    }
+
+    .milkshake-card:hover img {
+        transform: scale(1.06);
+    }
+
+    .milkshake-info {
+        padding: 20px;
+    }
+
+    .milkshake-info h2 {
+        color: #30251f;
+        font-size: 19px;
+        margin: 0 0 12px;
+    }
+
+    .milkshake-info p {
+        color: #777;
+        font-size: 14px;
+        line-height: 1.9;
+        min-height: 75px;
+    }
+
+    .milkshake-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .price {
+        color: #d97706;
+        font-size: 20px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .order-button {
+        background: #d97706;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 16px;
+        cursor: pointer;
+        font-size: 13px;
+        font-family: inherit;
+        transition: 0.3s;
+    }
+
+    .order-button:hover {
+        background: #a95405;
+    }
+
+    /* Blogs */
+    .blogs-section {
+        padding: 65px 20px;
+        background: #faf7f2;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .blogs-container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .blogs-heading {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .blogs-heading span {
+        color: #d97706;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .blogs-heading h1 {
+        color: #30251f;
+        font-size: 34px;
+        margin: 14px 0;
+    }
+
+    .blogs-heading p {
+        color: #777;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .blogs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .blog-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        transition: 0.3s ease;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    }
+
+    .blog-image {
+        height: 190px;
+        overflow: hidden;
+    }
+
+    .blog-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: 0.4s;
+    }
+
+    .blog-card:hover .blog-image img {
+        transform: scale(1.06);
+    }
+
+    .blog-content {
+        padding: 20px;
+    }
+
+    .blog-date {
+        color: #d97706;
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .blog-content h2 {
+        color: #30251f;
+        font-size: 19px;
+        margin-bottom: 12px;
+        line-height: 1.7;
+    }
+
+    .blog-content p {
+        color: #777;
+        font-size: 14px;
+        line-height: 2;
+        min-height: 85px;
+    }
+
+    .read-more {
+        display: inline-block;
+        text-decoration: none;
+        background: #d97706;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 25px;
+        font-size: 13px;
+        margin-top: 15px;
+        transition: 0.3s;
+    }
+
+    .read-more:hover {
+        background: #a95405;
+    }
+
+    /* Footer */
+    .footer {
+        background: #30251f;
+        color: #fff;
+        padding: 55px 20px 20px;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .footer-container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+        gap: 35px;
+        padding-bottom: 40px;
+    }
+
+    .footer-box h2 {
+        font-size: 23px;
+        color: #f59e0b;
+        margin-bottom: 18px;
+    }
+
+    .footer-box h3 {
+        font-size: 18px;
+        color: #f59e0b;
+        margin-bottom: 20px;
+    }
+
+    .footer-box p {
+        color: #ddd;
+        font-size: 14px;
+        line-height: 2.2;
+    }
+
+    .footer-box ul {
+        list-style: none;
+    }
+
+    .footer-box ul li {
+        margin-bottom: 14px;
+    }
+
+    .footer-box ul li a {
+        text-decoration: none;
+        color: #ddd;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .footer-box ul li a:hover {
+        color: #f59e0b;
+        padding-right: 5px;
+    }
+
+    .contact-item {
+        color: #ddd;
+        font-size: 14px;
+        line-height: 2.5;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    .social-links a {
+        width: 38px;
+        height: 38px;
+        background: #49382e;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 13px;
+        transition: 0.3s;
+    }
+
+    .social-links a:hover {
+        background: #d97706;
+        transform: translateY(-4px);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #55443a;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .footer-bottom p {
+        color: #bbb;
+        font-size: 13px;
+        line-height: 2;
+    }
+
+    .footer-bottom span {
+        color: #f59e0b;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+        .milkshake-grid,
+        .blogs-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-content {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 550px) {
+        .milkshake-grid,
+        .blogs-grid {
+            grid-template-columns: 1fr;
+            max-width: 350px;
+            margin: auto;
+        }
+
+        .section-heading h1,
+        .blogs-heading h1 {
+            font-size: 28px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .footer {
+            padding-top: 40px;
+        }
+    }
+</style>
+<body>
+<!-- Milkshakes Section -->
+<section class="milkshake-section">
+
+    <div class="milkshake-container">
+
+        <div class="section-heading">
+            <span>منوی ویژه کافی‌شاپ</span>
+            <h1>بهترین میلک‌شیک‌ها</h1>
+            <p>طعم خوشمزه و تازه را با نوشیدنی‌های ویژه ما تجربه کنید.</p>
+        </div>
+
+        <div class="milkshake-grid">
+
+            <div class="milkshake-card">
+                <div class="milkshake-image">
+                    <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=600" alt="میلک شیک توت فرنگی">
+                </div>
+
+                <div class="milkshake-info">
+                    <h2>میلک‌شیک توت‌فرنگی</h2>
+                    <p>ترکیبی خوشمزه از توت‌فرنگی تازه، شیر و بستنی خامه‌ای برای یک طعم دل‌پذیر.</p>
+
+                    <div class="milkshake-bottom">
+                        <span class="price">۲۵۰ افغانی</span>
+                        <button class="order-button">سفارش دهید</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="milkshake-card">
+                <div class="milkshake-image">
+                    <img src="https://manage.healu360.com/uploads/2024/08/bc2197e4983bdf7c7627542c0b43cef9.jpg" alt="میلک شیک موز">
+                </div>
+
+                <div class="milkshake-info">
+                    <h2>میلک‌شیک موز</h2>
+                    <p>نوشیدنی نرم و خامه‌ای با موز تازه و شیر، مناسب برای دوست‌داران طعم طبیعی.</p>
+
+                    <div class="milkshake-bottom">
+                        <span class="price">۲۰۰ افغانی</span>
+                        <button class="order-button">سفارش دهید</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="milkshake-card">
+                <div class="milkshake-image">
+                    <img src="https://au.wilfa.com/cdn/shop/articles/Slush-Machine_Chokolate-Milkshake_1x1_e35ef3a2-09c3-4657-be30-7b2383cb99c7.webp?v=1755074868&width=1920" alt="میلک شیک چاکلیت">
+                </div>
+
+                <div class="milkshake-info">
+                    <h2>میلک‌شیک چاکلیت</h2>
+                    <p>ترکیبی غلیظ و خوشمزه از چاکلیت، شیر و بستنی برای عاشقان طعم چاکلیت.</p>
+
+                    <div class="milkshake-bottom">
+                        <span class="price">۳۰۰ افغانی</span>
+                        <button class="order-button">سفارش دهید</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Latest Blogs Section -->
+<section class="blogs-section">
+
+    <div class="blogs-container">
+
+        <div class="blogs-heading">
+            <span>وبلاگ کافی‌شاپ ما</span>
+            <h1>آخرین مطالب وبلاگ</h1>
+            <p>
+                با مطالب جالب و آموزنده ما درباره قهوه،
+                نوشیدنی‌ها و دنیای کافی‌شاپ آشنا شوید.
+            </p>
+        </div>
+
+        <div class="blogs-grid">
+
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600" alt="قهوه تازه">
+                </div>
+
+                <div class="blog-content">
+                    <div class="blog-date">۳۰ میزان ۱۴۰۵</div>
+                    <h2>رازهای تهیه یک قهوه خوش‌طعم</h2>
+                    <p>برای داشتن یک قهوه خوش‌طعم، انتخاب دانه‌های باکیفیت، آب مناسب و روش درست تهیه اهمیت دارد.</p>
+                    <a href="#" class="read-more">بیشتر بخوانید ←</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600" alt="دسر خوشمزه">
+                </div>
+
+                <div class="blog-content">
+                    <div class="blog-date">۲۸ میزان ۱۴۰۵</div>
+                    <h2>دسرهای خوشمزه برای روزهای خاص</h2>
+                    <p>دسرهای خوشمزه می‌توانند لحظات شیرین و خاطره‌انگیزی برای شما و خانواده‌تان ایجاد کنند.</p>
+                    <a href="#" class="read-more">بیشتر بخوانید ←</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600" alt="نوشیدنی سرد">
+                </div>
+
+                <div class="blog-content">
+                    <div class="blog-date">۲۵ میزان ۱۴۰۵</div>
+                    <h2>بهترین نوشیدنی‌ها برای روزهای گرم</h2>
+                    <p>نوشیدنی‌های سرد و تازه با طعم‌های مختلف، انتخابی عالی برای روزهای گرم و آفتابی هستند.</p>
+                    <a href="#" class="read-more">بیشتر بخوانید ←</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-content">
+
+            <div class="footer-box">
+                <h2>☕ کافی‌شاپ ما</h2>
+                <p>
+                    به کافی‌شاپ ما خوش آمدید!
+                    ما با ارائه قهوه‌های خوش‌طعم،
+                    نوشیدنی‌های تازه و محیطی آرام،
+                    لحظات خوشی را برای شما فراهم می‌کنیم.
+                </p>
+            </div>
+
+            <div class="footer-box">
+                <h3>دسترسی سریع</h3>
+                <ul>
+                    <li><a href="#">صفحه اصلی</a></li>
+                    <li><a href="#">منوی نوشیدنی‌ها</a></li>
+                    <li><a href="#">میلک‌شیک‌ها</a></li>
+                    <li><a href="#">مطالب وبلاگ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>خدمات ما</h3>
+                <ul>
+                    <li><a href="#">انواع قهوه</a></li>
+                    <li><a href="#">نوشیدنی‌های سرد</a></li>
+                    <li><a href="#">دسرهای خوشمزه</a></li>
+                    <li><a href="#">سفارش آنلاین</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h3>ارتباط با ما</h3>
+
+                <div class="contact-item">📍 آدرس: افغانستان</div>
+                <div class="contact-item">📞 شماره تماس: 07XXXXXXXX</div>
+                <div class="contact-item">✉ ایمیل: info@example.com</div>
+
+                <h3 style="margin-top: 15px;">ما را دنبال کنید</h3>
+
+                <div class="social-links">
+                    <a href="#" aria-label="فیسبوک">FB</a>
+                    <a href="#" aria-label="اینستاگرام">IG</a>
+                    <a href="#" aria-label="واتساپ">WA</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                تمام حقوق این وب‌سایت محفوظ است.
+                طراحی شده با <span>❤</span>
+                توسط تیم ما
+            </p>
+            <p>© ۲۰۲۶ کافی‌شاپ ما</p>
+        </div>
+
+    </div>
+
+</footer>
 
 </body>
 </html>
