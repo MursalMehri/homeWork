@@ -2,12 +2,202 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="output.css">
-</head>
-<body class="  flex justify-center items-center h-screen ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0d0bd;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .hero {
+            background:
+                linear-gradient(90deg, rgba(0,0,0,.65), transparent),
+                url('https://images.pexels.com/photos/8937417/pexels-photo-8937417.jpeg?auto=compress&cs=tinysrgb&w=1600');
+
+            background-size: cover;
+            background-position: center;
+            border-radius: 0 0 45% 12% / 0 0 15% 12%;
+        }
+
+        .bottom-wave {
+            border-radius: 0 0 0 0;
+            clip-path: ellipse(100% 100% at 50% 0%);
+        }
+
+        .coffee-card img {
+            transition: transform .4s ease;
+        }
+
+        .coffee-card:hover img {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <main class="w-full min-h-screen bg-[#f0d0bd] overflow-hidden">
+
+        <!-- Navbar -->
+        <header class="w-full px-6 md:px-10 py-6">
+
+            <nav class="flex items-center justify-between">
+
+                <div class="text-[#49332d] font-bold text-xl">
+                    ☕
+                    <span>Cozy Solutions</span>
+                </div>
+
+                <ul class="hidden md:flex gap-10 text-[#49332d] font-semibold text-sm">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+                <span class="text-3xl text-[#49332d]">⌕</span>
+
+            </nav>
+
+        </header>
+
+
+        <!-- Hero -->
+        <section class="hero w-full h-[420px] md:h-[470px] flex items-center px-8 md:px-12">
+
+            <div class="text-white">
+
+                <h2 class="text-2xl md:text-3xl font-light text-gray-300">
+                    FRESHLY ROASTED
+                </h2>
+
+                <h1 class="text-6xl md:text-7xl font-extrabold text-[#f3b99c]">
+                    COFFEE
+                </h1>
+
+                <button class="bg-white text-[#49332d] rounded-full px-7 py-2 mt-8 text-sm font-semibold hover:bg-[#f3b99c] transition">
+                    Shop now
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Categories -->
+        <section id="menu" class="w-full px-6 md:px-10 py-16 text-center">
+
+            <h2 class="text-3xl font-bold text-[#352622]">
+                TOP CATEGORIES
+            </h2>
+
+            <p class="text-[#75594e] font-semibold mt-3">
+                Explore The Recent Most Bought Drinks This Week
+            </p>
+
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+
+
+                <!-- Mocha -->
+                <div class="coffee-card relative h-[250px] rounded-[35px] overflow-hidden">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=700"
+                        class="w-full h-full object-cover"
+                        alt="Coffee Mocha"
+                    >
+
+                    <div class="absolute inset-0 bg-black/35"></div>
+
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
+
+                        <h3 class="text-xl font-bold">
+                            Coffee Mocha
+                        </h3><p class="mt-5 text-sm">
+                            View More
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Americano -->
+                <div class="coffee-card relative h-[250px] rounded-[35px] overflow-hidden">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=700"
+                        class="w-full h-full object-cover"
+                        alt="Espresso Americano"
+                    >
+
+                    <div class="absolute inset-0 bg-black/40"></div>
+
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
+
+                        <h3 class="text-xl font-bold">
+                            Espresso Americano
+                        </h3>
+
+                        <p class="mt-5 text-sm">
+                            View More
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Cappuccino -->
+                <div class="coffee-card relative h-[250px] rounded-[35px] overflow-hidden">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=700"
+                        class="w-full h-full object-cover"
+                        alt="Cappuccino"
+                    >
+
+                    <div class="absolute inset-0 bg-black/40"></div>
+
+                    <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
+
+                        <h3 class="text-xl font-bold">
+                            Cappuccino
+                        </h3>
+
+                        <p class="mt-5 text-sm">
+                            View More
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
 </body>
 </html>
