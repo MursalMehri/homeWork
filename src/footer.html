@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>پایین صفحه کافی‌شاپ</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #faf7f2;
+        }
+
+        /* Footer */
+
+        .footer {
+            background: #30251f;
+            color: #fff;
+            padding: 55px 20px 20px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 35px;
+            padding-bottom: 40px;
+        }
+
+        .footer-box h2 {
+            font-size: 23px;
+            color: #f59e0b;
+            margin-bottom: 18px;
+        }
+
+        .footer-box h3 {
+            font-size: 18px;
+            color: #f59e0b;
+            margin-bottom: 20px;
+        }
+
+        .footer-box p {
+            color: #ddd;
+            font-size: 14px;
+            line-height: 2.2;
+        }
+
+        .footer-box ul {
+            list-style: none;
+        }
+
+        .footer-box ul li {
+            margin-bottom: 14px;
+        }
+
+        .footer-box ul li a {
+            text-decoration: none;
+            color: #ddd;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-box ul li a:hover {
+            color: #f59e0b;
+            padding-right: 5px;
+        }
+
+        .contact-item {
+            color: #ddd;
+            font-size: 14px;
+            line-height: 2.5;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .social-links a {
+            width: 38px;
+            height: 38px;
+            background: #49382e;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #d97706;
+            transform: translateY(-4px);
+        }
+
+        /* Copyright */
+
+        .footer-bottom {
+            border-top: 1px solid #55443a;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .footer-bottom p {
+            color: #bbb;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .footer-bottom span {
+            color: #f59e0b;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 800px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer {
+                padding-top: 40px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-content">
+
+                <!-- About -->
+
+                <div class="footer-box">
+
+                    <h2>☕ کافی‌شاپ ما</h2>
+
+                    <p>
+                        به کافی‌شاپ ما خوش آمدید!
+                        ما با ارائه قهوه‌های خوش‌طعم،
+                        نوشیدنی‌های تازه و محیطی آرام،
+                        لحظات خوشی را برای شما فراهم می‌کنیم.
+                    </p>
+
+                </div>
+
+
+                <!-- Quick Links -->
+
+                <div class="footer-box">
+
+                    <h3>دسترسی سریع</h3>
+
+                    <ul>
+                        <li><a href="#">صفحه اصلی</a></li>
+                        <li><a href="#">منوی نوشیدنی‌ها</a></li>
+                        <li><a href="#">میلک‌شیک‌ها</a></li>
+                        <li><a href="#">مطالب وبلاگ</a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Services -->
+
+                <div class="footer-box">
+
+                    <h3>خدمات ما</h3>
+
+                    <ul>
+                        <li><a href="#">انواع قهوه</a></li>
+                        <li><a href="#">نوشیدنی‌های سرد</a></li>
+                        <li><a href="#">دسرهای خوشمزه</a></li>
+                        <li><a href="#">سفارش آنلاین</a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- Contact -->
+
+                <div class="footer-box">
+
+                    <h3>ارتباط با ما</h3>
+
+                    <div class="contact-item">
+                        📍 آدرس: افغانستان
+                    </div>
+
+                    <div class="contact-item">
+                        📞 شماره تماس: 07XXXXXXXX
+                    </div>
+
+                    <div class="contact-item">
+                        ✉ ایمیل: info@example.com
+                    </div>
+
+                    <h3 style="margin-top: 15px;">
+                        ما را دنبال کنید
+                    </h3>
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="فیسبوک">FB</a>
+
+                        <a href="#" aria-label="اینستاگرام">IG</a>
+
+                        <a href="#" aria-label="واتساپ">WA</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Copyright -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    تمام حقوق این وب‌سایت محفوظ است.
+                    طراحی شده با <span>❤</span>
+                    توسط تیم ما
+                </p>
+
+                <p>
+                    © ۲۰۲۶ کافی‌شاپ ما
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
